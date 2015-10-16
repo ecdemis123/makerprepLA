@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+<!-- exercise 5-9 -->
+<div id="greeting"></div>
+  <p>how nice to have a visitor from
+  <span id="hometown"></span>!</p>
+<div id="source"><p>source text</p></div>
+<div id="destination"><p>destination text</p></div>\
+<div id="swap_1"><p>thing1</p></div>
+<div id="swap_2"><p>thing2</p></div>
+
+<!-- exercise 10 -->
+<p>
+  There once was a <em><span id="adj1"></span></em> programming instructor named <em><span id="name"></span></em>.  Who had a very <em><span id="adj2"></span></em> face.  All of his student <em><span id="verb1"></span></em> him very much.
+</p>
+
+  <script>
+//exercise 8
+// visitor_name = prompt("enter name");
+// welcome_message = "hello " + visitor_name;
+// document.querySelector('#greeting').textContent = welcome_message;
+// town = prompt("hometown");
+// document.querySelector('#hometown').textContent = town;
+
+// exercise 9
+var sourceText = document.querySelector('#source').textContent;
+document.querySelector('#destination').textContent = sourceText;
+var temp = document.querySelector('#swap_1').textContent; // str1
+var temp2 = document.querySelector('#swap_2').textContent; // str2
+temp2 = [temp, temp = temp2][0];
+// var temp3;
+// temp3=temp;
+// temp=temp2;
+// temp2=temp3;
+
+// exercise 10
+// document.querySelector('#noun1').textContent = "Funky";
+//
+// var noun1 = "funky";
+// document.querySelector('#noun1').textContent = noun1;
+//
+// var adj1 = prompt("give me an adjective!");
+// document.querySelector('#adj1').textContent = adj1;
+//
+// var name = prompt("give me a name!");
+// document.querySelector('#name').textContent = name;
+//
+// var adj2 = prompt("give me an adjective!");
+// document.querySelector('#adj2').textContent = adj2;
+//
+//
+// var verb1 = prompt("give me a verb!");
+// document.querySelector('#verb1').textContent = verb1;
+
+  </script>
+
+
+</body>
+</html>

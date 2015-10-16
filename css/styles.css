@@ -1,0 +1,48 @@
+p {
+  color: gray;
+}
+
+.btn {
+  background: #260339;
+  border: 2px solid  #9775AA;
+}
+
+.btn-default{
+  background: #9775AA;
+  border: 2px solid  #9775AA;
+}
+
+.navbar {
+  border: 2px solid #260339;
+  border-radius: 2px;
+}
+
+.lead{
+  margin: 25px;
+}
+
+img {
+  width: 150px;
+  position: absolute;
+  z-index: 1;
+  margin: 25px;
+  border: 2px solid #9775AA;
+}
+
+.my-box {
+  height: 325px;
+  background-color: #260339;
+  margin: auto;
+}
+
+.blog-post {
+  margin: 0 auto;
+}
+
+.col-md-12 {
+  background-color: #764B8E;
+  margin: 10px;
+  position: relative;
+  top: 15px;
+  /*left: 190px;*/
+}

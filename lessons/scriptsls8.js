@@ -60,7 +60,7 @@
 //   i++;
 // }
 
-// EXERCISE 7
+// EXERCISE 8
 // var userInput;
 // var compInput;
 // var goAgain = true;
@@ -116,3 +116,24 @@
 //   goAgain = confirm("would you like to play again?");
 //
 // }
+
+// EXERCISE 9
+// var maxNum = parseInt(prompt("what will the max guessing number be?"));
+// var guessNum = Math.floor(Math.random() * (maxNum - 2)) + 2;
+// var userGuess = parseInt(prompt("i'm thinking of a number between 1 and " + maxNum + ".  what is it?"));
+//
+// var guesses = 0;
+// 
+//
+// while (userGuess !== guessNum) {
+//     if (userGuess < guessNum) {
+//         console.log("toolow");
+//     } else {
+//         console.log("toohigh");
+//     }
+//   userGuess = parseInt(prompt("give a new number"));
+//     guesses++;
+//   //noprotect
+// }
+//
+// console.log("congrats, the number was " + guessNum);

@@ -28,3 +28,19 @@ car.seats = {
     comfy: true
   }
 };
+
+//EXERCISE 1
+var myCat = {
+  name: Rio,
+  age: 2,
+  isAlive: true,
+  favoriteToy: "Q-tips",
+  nappingSpot: "vanity"
+};
+
+//EXERCISE 2
+var myDreamLife = {};
+var propertyKey = "job";
+myDreamLife[propertyKey] = "millionaire";
+var anotherPropKey = "salary";
+myDreamLife[];

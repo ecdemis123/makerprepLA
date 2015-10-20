@@ -123,3 +123,24 @@ function calculator(n1,n2, operation){
 console.log(calculator(2,3,"sum"));
 
 //NIGHTMARE MODE
+function* fibonacci(){
+  var fn1 = 1;
+  var fn2 = 1;
+  while (true) {
+    var current = fn2;
+    fn2 = fn1;
+    fn1 = fn1 + current;
+    var reset = yield current;
+    if (reset) {
+      fn1 = 1;
+      fn2 = 1;
+    }
+  }
+}
+
+var sequence = fibonacci();
+console.log(sequence.next().value);
+console.log(sequence.next().value);
+console.log(sequence.next().value);
+console.log(sequence.next().value);
+console.log(sequence.next().value);

@@ -34,7 +34,7 @@ var functionsArray = [happy, sad, whatev];
 function answerCollector(collection){
   var resultsArray = [];
   for (var i = 0; i < collection.length; i++){
-  resultsArray.push(collection[i]());
+    resultsArray.push(collection[i]());
   }
   return resultsArray;
 }
@@ -44,3 +44,58 @@ console.log(blah);
 
 //EXERCISE 3
 // create a function that returns another function. it should accept one parameter when it is invoked and return 5 + parameter
+function miniAF(parameter){
+  return parameter + 5;
+}
+
+function addFive(){
+  return miniAF;
+}
+
+var addFiver = addFive();
+console.log(addFiver(5));
+console.log(addFiver(3));
+
+
+//EXERCISE 4
+//secret keeper
+
+function secret_keeper(string1, string2){
+  var secret = "juice";
+  console.log(string1 + secret + string2);
+}
+
+secret_keeper("my juicy secret ", " is so juicy");
+
+//EXERCISE 5
+// create a function which modifies the global variable, and one which does not
+var number = 10;
+
+function adds_10(){
+  console.log(number + 10);
+
+}
+
+function leaky_adds_10(){
+  number += 10;
+  console.log(number);
+}
+
+adds_10();
+console.log(number);
+
+leaky_adds_10();
+console.log(number);
+
+//EXERCISE 6
+// write a function that takes a number as input and returns a function that, when invoked with a second number as an argument, multiplies the two numbers together
+function multiplies_by_5(number) {
+  var number = number;
+  return function(parameter){
+    return parameter * number;
+  }
+}
+
+
+var times5 = multiplies_by_5(5);
+console.log(times5(4));

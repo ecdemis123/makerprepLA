@@ -141,10 +141,39 @@ function openerCloser(array) {
     }
 
   });
-  
+
   return zerosArray;
 }
 
 var counter = reduce(arr, function(prevEl,currEl) {
   return prevEl + currEl;
 },0);
+
+
+//alphabeta soup
+//this function takes an array of strings and then puts them in alphabetical order... sort of.  going to retry it using map, which I think will be more appropriate than reduce
+
+function alphabetSoup(strArray) {
+
+  return reduce(strArray, function(accum, currentEl){
+
+    // for the first iteration
+    if (accum === "") {
+      return currentEl;
+    }
+
+    for (var i = 0; i < accum.length; i++) {
+      if (currentEl[i] < accum[i][0]) { // insert currentEl before accum[i]
+        accum = [accum.slice(0, i*accum.length) + currentEl + accum.slice(i*accum.length)].join("");
+        return accum;
+      }
+    }
+
+    // if currentEl is > any letter in accum append it to the end of accum
+    return accum += currentEl;
+
+  }, "");
+
+}
+var strArray = ["days", "all", "cat", "bad", "all"];
+var soup = alphabetSoup(strArray);

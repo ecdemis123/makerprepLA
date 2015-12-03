@@ -177,3 +177,19 @@ function alphabetSoup(strArray) {
 }
 var strArray = ["days", "all", "cat", "bad", "all"];
 var soup = alphabetSoup(strArray);
+
+
+
+// using reduce with an objectsvar test = [1, 2, 4, 2, 1, 6, 3];
+var test = [1, 2, 4, 2, 1, 6, 3];
+
+var obj = reduce(test, function(a, b) {
+  var copya = Object.create(a);
+
+  copya[b] = b;
+
+  return copya;
+
+}, {});
+
+console.log(obj); ///outputs {1: 1, 2: 2, 3: 3, 4: 4, 6:6}
